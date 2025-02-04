@@ -3,6 +3,7 @@ import { useRoutes, Routes, Route } from "react-router-dom";
 import routes from "tempo-routes";
 import { Layout } from "./components/layout";
 import Dashboard from "./components/dashboard";
+import Students from "./components/students"; // added import statement
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           {/* App routes */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/students" element={<Students />} />
             {import.meta.env.VITE_TEMPO === "true" && (
               <Route path="/tempobook/*" />
             )}
